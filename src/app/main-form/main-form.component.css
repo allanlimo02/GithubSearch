@@ -1,0 +1,8 @@
+.avatar{
+    height: 300px;
+    border: double 1px black;
+}
+#output{
+    color: #091743;
+    font-weight: 800;
+}
