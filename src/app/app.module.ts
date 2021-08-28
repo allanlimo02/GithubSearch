@@ -7,7 +7,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainFormComponent } from './main-form/main-form.component';
 import { FormsModule } from '@angular/forms';
-import{ HttpClientModule} from '@angular/common/http'
+import{ HttpClientModule} from '@angular/common/http';
+import { RepositoriesComponent } from './repositories/repositories.component'
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import{ HttpClientModule} from '@angular/common/http'
     HeaderComponent,
     FooterComponent,
     MainFormComponent,
+    RepositoriesComponent,
 
   ],
   imports: [
