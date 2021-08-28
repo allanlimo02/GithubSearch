@@ -8,7 +8,8 @@ import { FooterComponent } from './footer/footer.component';
 import { MainFormComponent } from './main-form/main-form.component';
 import { FormsModule } from '@angular/forms';
 import{ HttpClientModule} from '@angular/common/http';
-import { RepositoriesComponent } from './repositories/repositories.component'
+import { RepositoriesComponent } from './repositories/repositories.component';
+import { ProfileComponent } from './profile/profile.component'
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { RepositoriesComponent } from './repositories/repositories.component'
     FooterComponent,
     MainFormComponent,
     RepositoriesComponent,
+    ProfileComponent,
 
   ],
   imports: [
