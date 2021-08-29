@@ -6,3 +6,19 @@
     color: #091743;
     font-weight: 800;
 }
+#frm{
+    margin-left: 20px;
+}
+#repositories{
+    background-color: green;
+    color: white;
+}
+.container ul li{
+    list-style: none;
+}
+.container  {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 1000px;
+    margin: 0 auto;
+}
