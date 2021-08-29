@@ -9,7 +9,8 @@ import { MainFormComponent } from './main-form/main-form.component';
 import { FormsModule } from '@angular/forms';
 import{ HttpClientModule} from '@angular/common/http';
 import { RepositoriesComponent } from './repositories/repositories.component';
-import { ProfileComponent } from './profile/profile.component'
+import { ProfileComponent } from './profile/profile.component';
+
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ProfileComponent } from './profile/profile.component'
     MainFormComponent,
     RepositoriesComponent,
     ProfileComponent,
+    
 
   ],
   imports: [

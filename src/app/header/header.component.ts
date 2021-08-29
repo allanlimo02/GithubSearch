@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MainFormComponent } from '../main-form/main-form.component';
 
 @Component({
   selector: 'app-header',

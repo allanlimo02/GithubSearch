@@ -14,7 +14,7 @@ export class MainFormComponent implements OnInit {
   user:any;
   repos:any;
 
-  newSearch=new Search('','','');
+  //newSearch=new Search('','','');
  getUsername(){
     this.serviceservice.getUser(this.uname).subscribe(profile=>{
       console.log(profile);
