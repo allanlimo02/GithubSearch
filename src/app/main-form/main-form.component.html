@@ -1,32 +1,40 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<div class="container">
+<div class="cont">
     <div class="row">
         <!-- Form  -->
-        <div class="col-md-4">
+        <div class="col-md-2">
             <br>
-            <form #fInput="ngForm"  class="form-inline">
-                <input  name='uname' type="search" id="gsearch" placeholder="input username" class="form-control form-control-sm mr-3 w-75" [(ngModel)]='uname'><br>
-                <input type="submit" value="Search" class="btn btn-success" (click)='getUsername()'>
+            <form #fInput="ngForm" id="frm" class="form-inline">
+                <input  name='uname' type="search" id="gsearch" placeholder="input username" class="form-control form-control-sm w-95" [(ngModel)]='uname' (keyup)='getUsername()'><br>
+                <input type="submit" value="Search" class="btn btn-success" (click)='getUsername()' (click)='getRepository()'>
                 <br>
                 
         
             </form>
         </div>
         <!--User credential output  -->
-        <div class="col-md-8">
+        <div class="col-md-8" *ngIf='user'>
             <br>
             <div class="row">
-                <div class="col-md-6 avatar">
-                    <img src={{user.avatar_url}} alt="" height="300px"  >
+                <div class="col-md-3 avatar">
+                    <img [src]=user.avatar_url alt="" height="300px"  >
+                    
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                 <h2>Account Details</h2><hr>
-                    <p>Email:{{user.email}} </p>
-                   <p>Followers:{{user.followers}} </p>
-                    <p>Following: {{user.following}}</p>
-                    <p>Date created: {{user.created_at| date}}</p>
-                    <p>Total Repositories: {{user.public_repos}}</p>
-            
+                    <p><span id="output">Username:</span>{{user.login}} </p><hr>
+                   <p><span id="output">Followers:</span>:{{user.followers}} </p><hr>
+                    <p><span id="output">Date created:</span>  {{user.created_at| date}}</p><hr>
+                    <p><span id="output">Total Repositories:</span>  {{user.public_repos}}</p>
+                    <p><a href="https://github.com/{{user.login}}" target="_blank"><button class="btn btn-primary" >Check Profile</button></a></p>
+                </div>
+                <div class="col-md-5">
+                    <br><br><br>
+                    <p><span id="output">Email:</span>{{user.email}} </p><hr>
+                    <p><span id="output">Location:</span>{{user.location}} </p><hr>
+                    <p><span id="output">Company:</span>{{user.company}} </p><hr>
+                    <p><span id="output">Lastly Updated:</span>{{user.updated_at}} </p><hr>
+
                 </div>
             </div>
         </div>
@@ -36,13 +44,28 @@
 </div>
 
 <!--  -->
-<div class="col">
-    <h3 style="text-align: center;">Repositories Associated to this account</h3>
-    <button class="btn btn-info" id="" (click)='getRepository'>Check repositories</button>
-    <div class="card">
-        <div class="card-body">
-            
-
-        </div>
-    </div>
+<hr>
+<div class="title">
+    <h2>
+        Repositories
+    </h2>
 </div>
+<div class="container" >
+    <div *ngFor='let repo of repos'>
+        <div class="card">
+            <div class="card-header">
+                <h3>{{repo.name}}</h3>
+            </div>
+            <div class="card-body">
+                Created on:{{repo.created_at}}<br>
+                Number of Forks: {{repo.forks_count}}
+                <p>Details:<br>
+                    {{repo.description}}
+                </p>
+
+            </div>
+            
+        </div>
+        <br><hr>
+    </div>
+ </div>
