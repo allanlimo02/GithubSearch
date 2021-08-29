@@ -10,14 +10,29 @@ import { ServiceService } from '../servicepage/service.service';
 })
 export class MainFormComponent implements OnInit {
 
-  newSearch=new Search('')
-  constructor() { }
-  public searchUser(){
-    return 
+  uname:any;
+  user:any;
+  repos:any;
+
+  newSearch=new Search('','','');
+ getUsername(){
+    this.serviceservice.getUser(this.uname).subscribe(profile=>{
+      console.log(profile);
+      return this.user = profile;
+    });
   }
+  getRepository(){
+    this.serviceservice.getRepos(this.uname).subscribe(data=>{
+      console.log(data)
+      return this.repos = data;
+    });
+  } 
+
+
+  constructor(private serviceservice:ServiceService) { }
   
   ngOnInit(): void {
-    console.log('Greetings')
+    
   }
 
 }
