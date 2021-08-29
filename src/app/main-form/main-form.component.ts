@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Search } from '../search';
 import { ServiceService } from '../servicepage/service.service';
 
 
@@ -13,8 +12,6 @@ export class MainFormComponent implements OnInit {
   uname:any;
   user:any;
   repos:any;
-
-  //newSearch=new Search('','','');
  getUsername(){
     this.serviceservice.getUser(this.uname).subscribe(profile=>{
       console.log(profile);
