@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  githubApi:'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',
+  githubApi:'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',
   githbUrl:'https://api.github.com/users/'
 };
 
