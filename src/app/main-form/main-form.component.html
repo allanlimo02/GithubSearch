@@ -57,7 +57,7 @@
                 <h3>{{repo.name}}</h3>
             </div>
             <div class="card-body">
-                Created on:{{repo.created_at}}<br>
+                Created on:{{repo.created_at|date}}<br>
                 Number of Forks: {{repo.forks_count}}
                 <p>Details:
                     {{repo.description}}
