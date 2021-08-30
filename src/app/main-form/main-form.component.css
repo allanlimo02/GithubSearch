@@ -22,3 +22,6 @@
     width: 1000px;
     margin: 0 auto;
 }
+.eachitem{
+    max-width: 250px;
+}

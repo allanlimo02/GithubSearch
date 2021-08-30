@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import{ HttpClientModule} from '@angular/common/http';
 import { RepositoriesComponent } from './repositories/repositories.component';
 import { ProfileComponent } from './profile/profile.component';
+import { DatecounterPipe } from './datecounter.pipe';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { ProfileComponent } from './profile/profile.component';
     MainFormComponent,
     RepositoriesComponent,
     ProfileComponent,
+    DatecounterPipe,
     
 
   ],
