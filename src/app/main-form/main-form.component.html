@@ -13,7 +13,7 @@
             </form>
         </div>
         <!--User credential output  -->
-        <div class="col-md-8" *ngIf='user'>
+        <div class="col-md-8">
             <br>
             <div class="row">
                 <div class="col-md-3 avatar">
@@ -33,7 +33,7 @@
                     <p><span id="output">Email:</span>{{user.email}} </p><hr>
                     <p><span id="output">Location:</span>{{user.location}} </p><hr>
                     <p><span id="output">Company:</span>{{user.company}} </p><hr>
-                    <p><span id="output">Lastly Updated:</span>{{user.updated_at}} </p><hr>
+                    <p><span id="output">Lastly Updated:</span>{{user.updated_at|date}} </p><hr>
 
                 </div>
             </div>
@@ -51,7 +51,7 @@
     </h2>
 </div>
 <div class="container" >
-    <div *ngFor='let repo of repos'>
+    <div class="eachitem" *ngFor='let repo of repos'>
         <div class="card">
             <div class="card-header">
                 <h3>{{repo.name}}</h3>
@@ -59,7 +59,7 @@
             <div class="card-body">
                 Created on:{{repo.created_at}}<br>
                 Number of Forks: {{repo.forks_count}}
-                <p>Details:<br>
+                <p>Details:
                     {{repo.description}}
                 </p>
 

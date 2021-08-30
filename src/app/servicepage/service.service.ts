@@ -10,11 +10,11 @@ export class ServiceService {
    
   constructor(private Http:HttpClient) { }
   getUser(unamer:any){
-    return this.Http.get("https://api.github.com/users/"+   unamer +"?access_token=" + environment.githubApi)
+    return this.Http.get("https://api.github.com/users/"+   unamer +"?access_token=" + environment.gitHubApi)
     .pipe(((response: any) => response));
   } 
   getRepos(repoName:any){
-    return this.Http.get("https://api.github.com/users/"+ repoName +"/repos?access_token=" + environment.githubApi)
+    return this.Http.get("https://api.github.com/users/"+ repoName +"/repos?access_token=" + environment.gitHubApi)
     .pipe(((response: any) => response));
 
   }
